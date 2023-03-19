@@ -1,0 +1,278 @@
+.LangGameBox{
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    background-color: #babfff;
+}
+/* gamebox */
+.LangGameCard{
+    /* border: 1px solid black; */
+    /* padding: 2rem 4rem; */
+    width: 50%;
+    margin: 2rem 4rem;
+    background-color:white;
+    text-align: center;
+    box-shadow: 0 0 4px 1px #717cf0;
+}
+.LangGameCard img{
+    padding-top: 2rem;
+    height: 14rem;
+}
+
+/* box header */
+.LangGameBoxHeader{
+    padding: 1rem;
+    background-color: #0C0F33;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.LangGameBoxHeader .gameTitle{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.LangGameBoxHeader .gamePoints{
+    background-color: aliceblue;
+    color: black;
+    padding: .5rem;
+    border-radius: 10px;
+}
+
+/* flag */
+.gameQues{
+    text-align: center;
+    font-size: 2rem;
+    padding:2rem;
+}
+
+.gameOptionBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 1rem;
+}
+
+.checkBtn{
+    border:none;
+    outline: none;
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #7DCE13;
+
+}
+
+.select{
+    padding: 1rem;
+    outline:none;
+    border:none;
+    font-size: 1rem;
+    width: 50%;
+    /* background-color: #b9bef4; */
+    box-shadow: 0 0 4px 1px #717cf0;
+}
+.detailsArea{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.detailAreaBtn{
+    display: flex;
+    gap:1rem;
+}
+.detailAreaBtn .restartBtn{
+    border:none;
+    outline:none;
+    background-color: #FF8C32;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+}
+.detailAreaBtn .nextBtn{
+ border:none;
+    outline:none;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #0C0F33;
+    color: white;
+}
+.detailsArea #answer{
+    font-size: 1.2rem;
+    font-weight: 600;
+
+}
+.detailsArea .ansss1{
+    color: #FF6363;
+}
+.detailsArea .ansss2{
+    color: #810955;
+}
+.detailsArea .ansss3{
+    color: #F15412;
+}
+
+/* modal button */
+.gameModalBtn{
+    border:none;
+    outline: none;
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #7DCE13;
+
+}
+/* modal window */
+.gamemodalContainer{
+    z-index: 10;
+    position: fixed;
+    left: 0;
+    top:0;
+    width: 100vw;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.gamemodalContainer .modal{
+    background: #ffffff;
+    width: 40%;
+    height: 15rem;
+    z-index: 21;
+    border-radius: 10px;
+    z-index: 22;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin:auto;
+}
+
+.modalClose{
+ border:none;
+    outline:none;
+    background-color: #FF8C32;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+}
+.modalFooterBtn{
+    display: flex;
+    gap: 1rem;
+}
+.gameRetry{
+     border:none;
+    outline: none;
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #7DCE13;
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .LangGameBoxHeader .gameTitle{
+    font-size: 1.4rem;
+    font-weight: 600;
+     }
+
+    .detailAreaBtn .restartBtn{    
+    padding: .5rem .8rem;
+    font-size: 1rem;
+    }
+    
+    .detailAreaBtn .nextBtn{
+    padding: .5rem .8rem;
+    font-size: 1rem;
+    }
+
+    .checkBtn{
+    padding: .5rem .8rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    }
+}
+
+ @media (min-width: 481px) and (max-width: 767px) {
+
+    .LangGameBoxHeader .gameTitle{
+    font-size: 1rem;
+    font-weight: 600;
+    } 
+
+    .gameQues{
+    text-align: center;
+    font-size: 1rem;
+    padding:2rem;
+    }
+
+    .detailAreaBtn .restartBtn{    
+    padding: .5rem;
+    font-size: .7rem;
+    }
+
+    .checkBtn{
+    padding: .5rem;
+    font-size: .7rem;
+    }
+
+    .detailAreaBtn .nextBtn{ 
+    padding: .5rem;
+    font-size: .7rem;
+    }
+}
+
+ @media (max-width: 480px) {
+    
+    .LangGameBoxHeader .gameTitle{
+    font-size: 1rem;
+    font-weight: 600;
+    } 
+
+    .gameQues{
+    text-align: center;
+    font-size: 1rem;
+    padding:2rem;
+    }
+
+    .detailAreaBtn .restartBtn{    
+    padding: .5rem;
+    font-size: .7rem;
+    }
+
+    .detailAreaBtn .nextBtn{ 
+    padding: .5rem;
+    font-size: .7rem;
+    }
+
+    .LangGameCard img{
+    padding-top: 2rem;
+    height: 10rem; 
+   }
+
+   .checkBtn{
+    padding: .5rem;
+    font-size: .7rem;
+    }
+}   

@@ -1,0 +1,75 @@
+.academicCourWrapper {
+  font-family: $font_El;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 70vh;
+  margin: 3rem 0;
+}
+
+.academicCourWrapper .class {
+  margin: 1rem;
+  padding: 1rem;
+  width: 65vw;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.academicCourWrapper .class .classItem {
+  a {
+    display: inline-block;
+    font-weight: 600;
+    color: white;
+    padding: 1rem 0;
+    background-color: #0c0f33;
+    width: 10rem;
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+}
+
+.academicCourWrapper .class .classItem:hover {
+  box-shadow: rgb(12, 15, 51, 0.7) 0px 10px 20px 1px;
+}
+
+////////////////////////@at-root
+.my-lecture-show-changer {
+  @include displayflex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 2px 1rem;
+  border-bottom: 1px solid #aaa;
+  button {
+    @include sitebutton;
+    font-size: 16px;
+  }
+}
+
+.change-my-lect {
+  font-family: $font_El;
+  margin-left: 1.25rem;
+}
+
+.styling-lecture-hreader{
+  font-family: $font_El;
+  padding-bottom: 0.5rem;
+}
+
+.my-lecture-links-content{
+  color: $black;
+}
+
+
+@media (max-width: 1180px) {
+  .academicCourWrapper .class {
+    width: 90%;
+  }
+}
+
+@media (max-width: 420px) {
+  .academicCourWrapper .class {
+    justify-content: center;
+  }
+}

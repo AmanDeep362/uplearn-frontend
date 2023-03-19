@@ -1,0 +1,81 @@
+.addcareercourses {
+    font-family: $font_El;
+}
+
+.career-course-header {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #0C0F33;
+    .backBtn {
+        @include sitebutton;
+        margin-right: 6rem;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-top: .5rem;
+    }
+}
+
+.career-course-heading {
+    height: 50px;
+   text-align: center;
+    justify-content: flex-end;
+    font-size: 2rem;
+}
+.career-upload-body {
+    display: flex;
+    align-items: center;
+   justify-content: center;
+   background-color: #DBE2F7;
+}
+.career-form-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0.5rem 0;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    background-color: white;
+    h3 {
+        font-size: 1.8rem;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+ }
+ .career-course-Input {
+    margin-bottom: 1.2rem;
+    label {
+        font-size: 1rem;
+        font-weight: 500;
+        color: $black;
+        cursor: pointer;
+    }
+    input {
+        @include siteinputbox;
+    }
+    textarea {
+        @include siteinputbox;
+        height: 100px;
+    }
+    select {
+       height: 30px;
+       width: 280px;
+       margin: 0px 8px;
+       border-radius: 7px;
+       @include siteinputbox;
+   }
+ }
+ .career-submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 2rem;
+    width: 100%;
+    margin: 12px 0px;
+    box-sizing: border-box;
+    padding: 5px;
+ 
+    .addBtn{
+       width: 150px;
+    }
+ }

@@ -1,0 +1,85 @@
+.career-counselling {
+  font-family: $font_El;
+}
+
+.after-banner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #0c0f33;
+  padding: 1rem;
+}
+
+.after-banner-text span {
+  color: white;
+  font-size: 2.7rem;
+}
+
+.after-banner-img img {
+  height: 15rem;
+  margin-left: 0;
+}
+
+.afterBannerWrapper {
+  margin-top: 2rem;
+  h1{
+    text-align: center;
+  }
+  .courseCategory {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+    min-height: 50vh;
+  }
+}
+
+.courseCategory .courseCategoryItem {
+  margin: 1rem;
+  h2{
+    text-decoration: underline;
+    color: #2b4eff;
+  }
+}
+
+.courseCategory ul {
+  margin-top: 0.5rem;
+  cursor: pointer;
+  color: $black;
+  font-size: 17px;
+}
+
+.courseCategory ul a{
+    color: $black;
+}
+.courseCategory ul a:hover {
+  color: #2b4eff;
+}
+
+.carrier-counselling-display {
+  color: $black;
+  padding: 1rem;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 0.5rem !important;
+  }
+  p {
+    margin-bottom: 0.5rem !important;
+    text-align: justify !important;
+  }
+  ul {
+    margin-left: 1rem !important;
+  }
+
+  img {
+    margin: 8px auto;
+    max-width: 25rem;
+    max-height: 22rem;
+  }
+}

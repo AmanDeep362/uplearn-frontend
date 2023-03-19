@@ -1,0 +1,220 @@
+.mainDashContainer {
+  margin: 0px 0.5rem 0px 4.5rem;
+  padding: 1.5rem 0px 0.6rem;
+}
+
+.studentNameContainer {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  color: white;
+  background-color: #171c24;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  .image {
+    margin-left: auto;
+  }
+  .image img {
+    width: 100%;
+    height: 10rem;
+    border-radius: 1rem;
+  }
+}
+
+.studentName {
+  width: 70%;
+  padding-left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  h4 {
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+  }
+  p {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+  }
+}
+
+.DashProfileImage {
+  margin: 0px 0.5rem 0px 4.5rem;
+  padding: 1rem 0px;
+  @include displayflex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .ImageUploaderContainer {
+    position: relative;
+    margin: 0.4rem;
+    .Profileimage {
+      width: 165px;
+      height: 165px;
+      display: block;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 165px;
+      width: 100%;
+      opacity: 0;
+      transition: 0.3s ease;
+      background-color: rgba(0, 0, 0, 0.3);
+      @include displayflex;
+      justify-content: center;
+      flex-direction: column;
+      svg {
+        font-size: 2.5rem;
+        color: rgba(0, 0, 0, 0.6);
+        margin-top: 40px;
+      }
+      svg:hover {
+        color: rgba(0, 0, 0, 0.9);
+      }
+      label:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  input[type="file"] {
+    visibility: hidden;
+  }
+}
+
+.ImageUploaderContainer:hover .overlay {
+  opacity: 1;
+}
+
+.DetailsContainer {
+  margin: 0px 0.75rem;
+  h1 {
+    color: $navbar_color;
+    text-transform: capitalize;
+  }
+
+  p {
+    text-transform: capitalize;
+    text-align: justify;
+    margin-bottom: 0.75rem;
+  }
+}
+
+.aboutpro {
+  margin-bottom: 2rem;
+  p {
+    text-transform: none !important;
+  }
+}
+
+.Inner-dertails-sd-dash {
+  margin: 0px 0.5rem 0px 4.5rem;
+  padding: 0px 0px 2rem;
+}
+.AddressContainer {
+  @include displayflex;
+  flex-wrap: wrap;
+  padding: 1.2rem 0px 2px;
+  p {
+    margin-right: 1rem;
+  }
+}
+
+.DashProfileButton {
+  width: 100%;
+  text-align: center;
+  margin: 1rem;
+  button {
+    @include sitebutton;
+  }
+}
+
+#addProfileImagename {
+  font-size: 15px;
+  font-weight: 600;
+  width: 150px;
+  overflow: hidden;
+}
+
+@media (max-width: 763px) {
+  .mainDashContainer {
+    margin: 0.5rem;
+    padding: 0.5rem 0px;
+  }
+
+  .studentNameContainer {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    color: white;
+    background-color: #171c24;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    .image {
+      display: none;
+    }
+  }
+
+  .studentName {
+    width: 100%;
+    padding: 6px;
+    justify-content: center;
+    align-items: center;
+    p {
+      text-align: center;
+    }
+  }
+
+  .DashProfileImage {
+    margin: 0.5rem;
+    padding: 0.65rem 0px;
+    gap: 0.65rem;
+  }
+
+  .DetailsContainer {
+    margin: 0px;
+  }
+
+  .Inner-dertails-sd-dash {
+    margin: 0.5rem;
+    padding: 0px 0px 2rem;
+  }
+
+  .DashProfileButton {
+    margin: 2rem 0.5rem 1rem;
+    button {
+      font-size: 16px;
+    }
+  }
+
+  #profileLine {
+    margin: 0.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .studentNameContainer {
+    width: 100%;
+    height: 100%;
+  }
+
+  .studentName {
+    padding: 1.8rem 1rem;
+    h4 {
+      font-size: 1.75rem;
+    }
+    p {
+      font-size: 0.85rem;
+    }
+  }
+
+  .DashProfileImage {
+    justify-content: center;
+  }
+  .schooling-width{
+    max-width: 230px;
+  }
+}

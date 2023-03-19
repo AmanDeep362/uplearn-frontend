@@ -1,0 +1,237 @@
+.doubt-container {
+  font-family: $font_El;
+}
+
+.Doubt-heading {
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+    letter-spacing: 1px;
+    color: $darkgrey;
+  }
+}
+
+.doubt-filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  margin: 1rem 0px;
+  background-color: #f0f0f0;
+
+  .DoubtSearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input {
+      width: 80vw;
+      padding: 10px 20px;
+      color: #171c24;
+      border-radius: 8px 0px 0px 8px;
+      outline: none;
+      border-right: 0px;
+    }
+
+    button {
+      @include sitebutton;
+      padding: 5px 10px 4px;
+      margin: 0px;
+      border-radius: 0px 8px 8px 0px;
+      border: 1px solid black;
+      border-left: 0px;
+      @include displayflex;
+
+      i {
+        margin: 0px 5px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+.askbutton {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  select {
+    padding: 5px 10px 4px;
+    border-radius: 0px 8px 8px 0px;
+    border: 1px solid black;
+    border-radius: 7px;
+    font-family: $font_El;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  button {
+    @include sitebutton;
+    padding: 5px 10px 4px;
+    border-radius: 0px 8px 8px 0px;
+    border: 1px solid black;
+    border-radius: 7px;
+    font-size: 16px;
+  }
+}
+
+.doubt-body {
+  margin: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .doub-b-head {
+    h1 {
+      text-align: center;
+    }
+  }
+
+  .doubt-card {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: 1px solid #aaa;
+    background-color: #f9f9f9;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 1rem;
+
+    &:hover {
+      background-color: #f0f0f0;
+      color: white;
+      transform: scale(1.01);
+    }
+
+    .doubt-card-header {
+      font-size: 18px;
+      font-weight: 600;
+      padding-bottom: 10px;
+      color: #0c0f33;
+    }
+
+    .doubt-card-body {
+      font-size: 17px;
+      padding-bottom: 4px;
+      color: #000;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .doubt-card-body-right {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        span {
+          display: inline-block;
+          margin-left: 15px;
+
+          .doub-ico {
+            color: #0c0f33;
+          }
+        }
+      }
+    }
+
+    .doubt-card-footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 5px;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #000;
+    }
+  }
+}
+
+// Start Banner Styling
+.intro {
+  position: relative;
+  color: #fff;
+  .squares-wrapper {
+    background: linear-gradient(to left, #6578d6, #2b4eff);
+    @include displayflex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+  }
+  .banner-text {
+    @include displayflex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    h1 {
+      color: white;
+      font-size: 2.8rem;
+    }
+    p {
+      color: white;
+      margin-top: 30px;
+    }
+    .course-banner-btn {
+      background-color: #e79118;
+      border: none;
+      font-size: 18px;
+      border-radius: 10px;
+      margin-top: 30px;
+      padding: 6px 16px;
+      color: #fff;
+    }
+  }
+
+  .banner-img {
+    @include displayflex;
+    justify-content: center;
+    width: 50%;
+  }
+
+  .squares {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+    li {
+      position: absolute;
+      display: block;
+      list-style: none;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      animation: animate 25s linear infinite;
+      bottom: -150px;
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.8;
+    border-radius: 0%;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 0%;
+  }
+}
+
+// End Banner Styling

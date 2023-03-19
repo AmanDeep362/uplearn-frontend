@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
+
+.gamecontainer {
+    width: 70%;
+    margin: 30px auto;
+     font-family: 'El Messiri', sans-serif;
+}
+
+#app {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#button-frame {
+    width: 20%;
+    margin-top: 90px;
+    text-align: center;
+} 
+
+#answer-frame,
+#star-frame {
+    width: 40%;
+}
+
+#star-frame .icon {
+    margin: 0.3em;
+    font-size: 1.7em;
+    color:rgb(13, 8, 55);
+}
+
+.card__height {
+    height: 270px;
+    margin-bottom: 30px;
+    background-color: #B0E2FA;
+     display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+#card-height {
+    height: 150px;
+}
+
+#number-frame .number,
+#answer-frame .card span {
+    display: inline-block;
+    margin: .5rem;
+    padding: .2rem;
+    background-color: #0C0F33;
+    width: 40px;
+    text-align: center;
+    /* border-radius: 50%; */
+    font-size: 22px;
+    cursor: pointer;
+    color:white;
+}
+
+#number-frame .selected-true {
+    background-color: #e8e8e8;
+    color: #7f7272;
+    cursor: not-allowed;
+}
+
+/* #number-frame .used-true {
+    background-color: #a6bfd0;
+    color: #63676b;
+    cursor: not-allowed;
+} */
+
+.gamemodal-container {
+    z-index: 10;
+    position: fixed;
+    left: 0;
+    top:0;
+    width: 100vw;
+
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.gamemodal-container .modal{
+   
+    background: #ffffff;
+    /* border: 3px solid #1ebeeb; */
+    width: 50%;
+    height: 200px;
+    border-radius: 10px;
+    background-color: #babfff;
+    z-index: 22;
+    position: relative;
+    padding: 10px;
+  
+    display: flex;
+      justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* margin: 18rem 22rem; */
+   margin:auto;
+
+}
+
+
+ #hide {
+    display: none;
+}
+
+.playAgainBtn{
+    background-color: #0C0F33;
+    color: white;
+    margin-top: .5rem;
+    padding: .5rem 1rem;
+    cursor: pointer;
+}
+.playAgainBtn:hover{
+    box-shadow: 0 0 2px 2px rgb(13, 8, 55);
+}
+/* MEDIA QUERY */
+
+
+/* Mini-laptop */
+
+@media (max-width:1024px) {
+    .gamecontainer {
+        width: 80%;
+    }
+}
+
+
+/* Tablet */
+
+@media (max-width:768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .gamecontainer {
+        width: 80%;
+    }
+    .card__height {
+        height: 230px;
+        margin-bottom: 20px;
+    }
+    #button-frame {
+        margin-top: 50px;
+    }
+    #number-frame .number {
+        padding: .1rem;
+        width: 35px;
+    }
+}
+
+
+/* mobile */
+
+@media (max-width:425px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    .gamecontainer {
+        width: 100%;
+        margin: 50px auto;
+    }
+    .card__height {
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    #number-frame .number {
+        font-size: 20px;
+        width: 30px;
+        padding: 0px;
+    }
+    #button-frame {
+        margin-top: 40px;
+    }
+    .btn-lg {
+        padding: .5rem 0.7em;
+    }
+    #star-frame .fa {
+        margin: 0.3em;
+        font-size: 1.3em;
+    }
+
+    .gamemodal-container .modal {
+        width: 80%;
+        height: 180px;
+    }
+}

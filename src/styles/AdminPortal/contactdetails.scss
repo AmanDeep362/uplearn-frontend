@@ -1,0 +1,26 @@
+.contact-heading {
+    font-family: $font_El;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+//modal window 
+.cont-md {
+    display: block !important;
+    background: rgba(0, 0, 0, 0.2) !important;
+    z-index: 11;
+}
+
+.cont-innmd {
+    margin: 2rem auto auto !important;
+    .signInput {
+        width: 100%;
+        padding: 1.2rem;
+        margin-bottom: 0px;
+        align-items: flex-start;
+        textarea {
+            @include siteinputbox;
+            height: 100px;
+        }
+    }
+}

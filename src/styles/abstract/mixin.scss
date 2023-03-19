@@ -1,0 +1,32 @@
+@mixin displayflex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin sitebutton {
+    font-family: $font_El;
+    font-size: 18px;
+    font-weight: 500;
+    background: $navbar_color;
+    color: #fff;
+    border-radius: 5px;
+    padding: 6px 20px;
+    margin: 2px 1rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+@mixin siteinputbox {
+    width: 100%;
+    height: 60px;
+    line-height: 50px;
+    padding: 0 15px;
+    font-size: 15px;
+    background: #E8F0FE;
+    color: $black;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+}

@@ -1,0 +1,34 @@
+.instructor-table {
+    width: 100%;
+    padding: 1rem;
+    overflow-x: scroll;
+    box-shadow: inset 1px 1px 8px #888888;
+    table,
+    th,
+    td {
+        padding: 6px;
+        border: 1px solid #ccc;
+        text-transform: capitalize;
+        text-align: center;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th {
+        background: #2b4eff;
+        color: white;
+        padding: 9px;
+        font-weight: bold;
+        font-family: $font_El;
+        font-size: 1.1rem;
+    }
+    tr:nth-of-type(even) {
+        background: #3a4dad34;
+    }
+    .rmvbtn {
+        @include sitebutton;
+        padding: 2px 1rem;
+        margin: 0px 4px
+    }
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "image": "./assets/images/register.jpeg",
+    "heading": "Instructor Registration",
+    "title": "A learning community dedicated to building respectful and responsible citizens and empowering all learners.",
+    "Link": "/admin-portal-instructorRegis-190310554227",
+    "name": "Register"
+  },
+  {
+    "id": 2,
+    "image": "./assets/images/teach.jpg",
+    "heading": "Check Instructor Details",
+    "title": "There are no secrets to success. It is the result of preparation, hard work, and learning from failure.",
+    "Link": "/admin-portal-InstructorList-190310554227",
+    "name": "Check Details"
+  },
+  {
+    "id": 3,
+
+    "image": "./assets/images/Student.jpg",
+    "heading": "Check Students Details",
+    "title": "Theory is knowledge that doesn't work. Practice is when everything works and you don't know why.",
+    "Link": "/admin-portal-StudentList-190310554227",
+    "name": "Check Details"
+  },
+  {
+    "id": 4,
+    "image": "./assets/images/contact-Img.jpg",
+    "heading": "Contact Details",
+    "title": "Curiosity is the fuel for discovery, learning & questions will get you further than confidence and answers",
+    "Link": "/admin-portal-contact-details-190310554227",
+    "name": "Check Details"
+  },
+  {
+    "id": 5,
+    "image": "./assets/images/uiexp.jpeg",
+    "heading": "Assign Tasks",
+    "title": "Stop being afraid of what could go wrong, and start being excited of what could go right.",
+    "Link": "/admin-portal-assign-task-190310554227",
+    "name": "Assign Tasks"
+  },
+
+  {
+    "id": 6,
+    "image": "./assets/images/todo.jpg",
+    "heading": "Review Assign Task",
+    "title": "What are your goals for improving your productivity without reducing the quality of your work?",
+    "Link": "/admin-portal-review-assign-task-190310554227",
+    "name": "Review Task"
+  },
+  {
+    "id": 7,
+    "image": "./assets/images/library.jpg",
+    "heading": "Add Books to Library",
+    "title": "You can get help from teachers, but you're going to have to learn a lot by yourself, sitting alone in a room.",
+    "Link": "/admin-portal-Addbook-190310554227",
+    "name": "Add Books"
+  },
+  {
+    "id": 8,
+    "image": "./assets/images/career-admin.png",
+    "heading": "Add Councelling details",
+    "title": "Counselling is an active process of communication and dialogue between a trained professional and a Student community",
+    "Link": "/admin-portal-Add-Carrier-190310554227",
+    "name": "Add Careers"
+  }
+]

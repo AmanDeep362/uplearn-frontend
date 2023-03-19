@@ -1,0 +1,205 @@
+.add-course-container {
+  font-family: $font_El;
+}
+
+.add-course-header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #0c0f33;
+  .backBtn {
+    margin-right: 6rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+  }
+}
+
+.add-course-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dbe2f7;
+}
+
+.add-course-form-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0.8rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  h1 {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+}
+
+//radio
+.add-course-radio {
+  @include displayflex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 5px;
+  label {
+    font-size: 1em;
+    font-weight: 500;
+    color: $black;
+    cursor: pointer;
+    margin-right: 2rem;
+    padding: 0px 4px;
+  }
+  input {
+    padding: 4px;
+  }
+}
+
+.AddedCourseDetails {
+  padding: 1.25rem 0px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.AddedCourseDetailsSelect {
+  margin-right: 5rem;
+  select {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    font-size: 17px;
+    font-family: $font_El;
+    border-radius: 0.5rem;
+  }
+}
+
+.img-uplaod-btn {
+  position: relative;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  background-color: transparent;
+}
+
+.img-uplaod-btn::before {
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-family: $font_El;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "Choose File...";
+  background-color: #0c0f33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//// Submit Button
+.course-field-submit {
+  @include displayflex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.course-submit-btn {
+  @include sitebutton;
+  display: inline-block;
+  line-height: 2rem;
+  width: 100%;
+  margin: 12px 0px;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.star {
+  color: red;
+}
+
+#loader-reg {
+  width: 2.8rem;
+  align-items: center;
+  margin-bottom: -1rem;
+  margin-right: 2rem;
+  display: none;
+}
+
+////////////////////////////////////
+/// For Assign Task Page Instructor Dashboard ///
+
+.assignedtaskpreview {
+  width: 100%;
+  .asstskdecp {
+    padding: 2px 1rem;
+    text-align: justify;
+  }
+  .assignedtaskpreview_inner {
+    @include displayflex;
+    flex-wrap: wrap;
+    padding: 3px;
+    p {
+      padding: 1rem;
+    }
+  }
+}
+
+.assignedtaskpreviewdefine {
+  font-size: 1.4rem;
+  padding: 1.2rem 1rem 0.8rem;
+  text-decoration: underline;
+}
+
+.submitassigntask {
+  @include displayflex;
+  justify-content: center;
+  margin: 2rem 1rem;
+  button {
+    @include sitebutton;
+  }
+  button:last-child {
+    background-color: $success;
+  }
+}
+.makedivision {
+  background-color: #fefefe;
+  padding: 0.6rem 0px;
+  form {
+    input {
+      height: 46px;
+      background-color: #f9f9f9;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    textarea {
+      width: 100%;
+      min-height: 17vh;
+      border-radius: 0.5rem;
+      padding: 0.6rem;
+      outline: none;
+      background-color: #f9f9f9;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+//// To set min height of Suneditor /////
+.se-wrapper {
+  min-height: 45vh;
+}
+////////////////////////////////////////////////
+
+// media queries
+@media (max-width: 763px) {
+  .add-course-form-container {
+    margin: 0.3rem;
+  }
+
+  .AddedCourseDetailsSelect {
+    select {
+      margin-bottom: 1.25rem;
+    }
+  }
+}

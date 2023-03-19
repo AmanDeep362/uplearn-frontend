@@ -1,0 +1,69 @@
+// Modal if the Update Profile Page
+.modal-profile {
+    background: #FAFBFF;
+    padding: 1rem 0px 4rem;
+    width: 100%;
+    height: 100%;
+    font-family: $font_El;
+    .modal-outer-container {
+        padding: 0px 1.2rem;
+        h1 {
+            padding: 1rem;
+            font-size: 2.5rem;
+            color: $darkgrey;
+            text-align: center;
+        }
+        h2 {
+            color: $navbar_color;
+            border-bottom: 1px solid $navbar_color;
+        }
+        .centerbtn {
+            @include displayflex;
+            flex-direction: column;
+            justify-content: center;
+            button {
+                @include sitebutton;
+                width: 80vw;
+            }
+        }
+        textarea {
+            @include siteinputbox;
+            height: 100px;
+        }
+        a {
+            display: block;
+            margin: 0px 1rem 1rem;
+        }
+    }
+}
+
+.modal-input-container {
+    @include displayflex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1rem 0.5rem;
+    input,
+    select {
+        height: 50px;
+        width: 290px;
+        margin: 0px 8px;
+    }
+}
+
+@media screen and (max-width: 763px) {
+    .modal-outer-container {
+        padding: 0px 0.8rem !important;
+    }
+    .modal-input-container {
+        justify-content: space-evenly;
+        margin: 1rem 0.5rem;
+        .signInput {
+            width: 100%;
+            input,
+            select {
+                width: 100%;
+                margin: 0px;
+            }
+        }
+    }
+}

@@ -1,0 +1,90 @@
+.schedule-class-heading{
+    color: #2b4eff;
+    font-family: $font_El;
+    text-align: center;
+}
+.schedule-class-container
+{
+    display: flex;
+    font-family: $font_El;
+    justify-content: center;
+    padding: 50px 5px;
+}
+.schedule-class-container-2
+{
+    display: flex;
+    font-family: $font_El;
+    width: 400px;
+    justify-content: flex-start;
+    padding: 10px 5px;
+}
+.class-scheduler-card-container{
+    border: 1px solid gray;
+    width: 400px;
+    padding: 20px;
+    box-shadow: 2px 2px 2px black;
+    .class-scheduler-card-header{
+        h2{
+            color: #2b4eff;
+        }
+        p{
+            color: rgb(75, 75, 75);
+            margin: 5px 0px;
+        }
+    }
+    .class-schedule-card-footer{
+        padding-top: 10px;
+        div strong{
+            color: rgb(75, 75, 75);
+            margin: 5px 0px;
+        }
+        .class-scheduler-btn{
+            margin-right: 20px;
+        }
+    }
+}
+.schedule-new{
+    margin-left: 40px;
+}
+.my-classroom-view-container{
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.attendance-table {
+    width: 100%;
+    padding: 1rem;
+    // overflow-x: scroll;
+    // box-shadow: inset 1px 1px 8px #888888;
+    table,
+    th,
+    td {
+        padding: 6px;
+        border: 1px solid #ccc;
+        text-transform: capitalize;
+        text-align: center;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th {
+        background: #2b4eff;
+        color: white;
+        padding: 9px;
+        font-weight: bold;
+        font-family: $font_El;
+        font-size: 1.1rem;
+    }
+    // tr:nth-of-type(odd) {
+    //     background: #3a4dad34;
+    // }
+    .rmvbtn {
+        @include sitebutton;
+        padding: 2px 1rem;
+        margin: 0px 4px
+    }
+}
+.view-attance-table-tr,.view-attance-table-tr-2{
+    display: none;
+}

@@ -1,0 +1,148 @@
+.instructor-myprofile-container {
+  font-family: $font_El;
+  margin-left: 4rem;
+  padding: 1rem;
+  // background-color: #f0f0f0;
+}
+.instructor-myprofile-heading {
+  @include displayflex;
+  flex-wrap: wrap;
+  margin-bottom: 0.8rem;
+  button {
+    @include sitebutton;
+    font-size: 16px;
+  }
+}
+.instructor-myprofile-container-basic {
+  @include displayflex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 1rem 0px;
+  margin-bottom: 0.5rem;
+
+  .instructor-myprofile-container-image {
+    width: 165px;
+    height: 165px;
+    margin-right: 2rem;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+    }
+  }
+  .instructor-myprofile-container-profile {
+    margin-right: 2rem;
+    min-width: 250px;
+    h1 {
+      color: $navbar_color;
+    }
+    p {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.instructor-myprofile-container-other {
+  min-width: 300px;
+  h1 {
+    color: $navbar_color;
+  }
+  .instructor-myprofile-container-inner {
+    @include displayflex;
+    flex-wrap: wrap;
+    P {
+      padding: 1rem 2rem 0px 0px;
+    }
+  }
+}
+
+.inst-profile-cards-container {
+  @include displayflex;
+  flex-wrap: wrap;
+  .inst-profile-cards {
+    width: 280px;
+    background-color: #f9f9f9;
+    border: 1px solid #aaa;
+    padding: 1.5rem;
+    margin: 1rem 1rem 1rem 0px;
+    border-radius: 0.5rem;
+    p {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      svg {
+        color: gold;
+      }
+    }
+    h1 {
+      display: inline-block;
+      font-size: 2.5rem;
+      padding-bottom: 2px;
+      margin-left: 1.25rem;
+      border-bottom: 3px solid $navbar_color;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .instructor-myprofile-container-other {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 763px) {
+  .instructor-myprofile-container {
+    margin-left: 0px;
+    padding: 0.6rem;
+  }
+  .instructor-myprofile-heading {
+    button {
+      font-size: 15px;
+      margin-top: 1.2rem;
+    }
+  }
+  .instructor-myprofile-container-basic {
+    margin-bottom: 0px;
+
+    .instructor-myprofile-container-image {
+      width: 150px;
+      height: 150px;
+      
+    }
+    .instructor-myprofile-container-profile {
+        margin-top: 1rem;
+      
+    }
+  }
+
+
+
+  .inst-profile-cards-container {
+    @include displayflex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .inst-profile-cards {
+      width: 280px;
+      background-color: #fff;
+      border: 1px solid #aaa;
+      padding: 1.5rem;
+      margin: 1rem 1rem 1rem 0px;
+      border-radius: 0.5rem;
+      p {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        svg {
+          color: gold;
+        }
+      }
+      h1 {
+        display: inline-block;
+        font-size: 2.5rem;
+        padding-bottom: 2px;
+        margin-left: 1.25rem;
+        border-bottom: 3px solid $navbar_color;
+      }
+    }
+  }
+}

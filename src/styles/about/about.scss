@@ -1,0 +1,137 @@
+// Banner Image
+.about-banner-image {
+  // Set a background Image
+  background-image: url("../../assets/images/about-banner.jpg");
+  background-color: $black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 60vh;
+  width: 100vw;
+  border-bottom: 1px solid whitesmoke;
+  box-shadow: inset 1px 1px 8px black;
+}
+
+// About UpLearn
+.about-uplearn {
+  font-family: $font_El;
+  .about-left-side {
+    padding: 1rem;
+    h1 {
+      color: $navbar_color;
+      text-align: center;
+      font-size: 2.25rem;
+    }
+    p {
+      text-align: justify;
+      font-size: 17px;
+    }
+    ul {
+      margin-left: 1.2rem;
+      li {
+        font-size: 17px;
+      }
+    }
+  }
+}
+// About Purpose and Scope
+.lower-parallel-boxes {
+  font-family: $font_El;
+  @include displayflex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  align-items: stretch;
+  border-top: 1px solid $black;
+  border-bottom: 1px solid $black;
+  margin-bottom: 0.2rem;
+  .lower-left-td {
+    width: 50%;
+    color: #fff;
+    background-color: #2ba9ffc7;
+    border-right: 1px solid $black;
+    h1 {
+      padding: 1rem;
+      text-align: center;
+      font-size: 2.2rem;
+    }
+    p {
+      padding: 0px 1rem 1.5rem;
+      text-align: justify;
+      font-size: 17px;
+    }
+  }
+  .lower-right-td {
+    width: 50%;
+    color: $black;
+    background-color: whitesmoke;
+    h1 {
+      padding: 1rem;
+      text-align: center;
+      font-size: 2.2rem;
+    }
+    p {
+      padding: 0px 1rem 1.5rem;
+      text-align: justify;
+      font-size: 17px;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  // About UpLearn
+  .about-uplearn {
+    .about-left-side {
+      padding: 0.75rem;
+    }
+  }
+  // About Purpose and Scope
+  .lower-parallel-boxes {
+    .lower-left-td {
+      width: 100%;
+    }
+    .lower-right-td {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  // About UpLearn
+  .about-uplearn {
+    .about-left-side {
+      padding: 1rem 0.5rem;
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 16px;
+      }
+      ul {
+        margin-left: 1rem;
+        li {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  // About Purpose and Scope
+  .lower-parallel-boxes {
+    .lower-left-td {
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+    .lower-right-td {
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}

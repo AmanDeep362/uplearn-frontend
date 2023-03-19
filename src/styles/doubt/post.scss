@@ -1,0 +1,174 @@
+.post-doubt {
+  font-family: $font_El;
+}
+
+.post-doubt-header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #0c0f33;
+  .backBtn {
+    margin-right: 6rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+  }
+}
+
+.post-doubt-heading {
+  height: 50px;
+  text-align: center;
+  justify-content: flex-end;
+  font-size: 2rem;
+}
+
+.post-doubt-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dbe2f7;
+}
+
+.post-doubt-form-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0.5rem 0;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  h3 {
+    font-size: 1.8rem;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+}
+
+.post-doubt-form-container .fields {
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+  gap: 0.8rem;
+  margin: 8px 0 2rem 0;
+  flex-wrap: wrap;
+}
+
+.post-doubt-form-container .fields .inputField {
+  display: flex;
+  flex-direction: column;
+  // width: calc(100% /3 - 10px);
+  width: 290px;
+}
+
+.post-doubt-Input {
+  margin-bottom: 1.2rem;
+  label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: $black;
+    cursor: pointer;
+  }
+  input {
+    @include siteinputbox;
+  }
+  textarea {
+    @include siteinputbox;
+    height: 100px;
+  }
+  select {
+    height: 30px;
+    width: 280px;
+    margin: 0px 8px;
+    border-radius: 7px;
+    @include siteinputbox;
+  }
+}
+
+//radio
+.post-doubt-radio {
+  margin-bottom: 1.2rem;
+  label {
+    font-size: 1em;
+    font-weight: 500;
+    color: $black;
+    cursor: pointer;
+  }
+}
+
+//upload button
+.post-doubt-uploadBtn {
+  // margin-top: 1rem;
+  position: relative;
+  all: none;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  background-color: transparent;
+}
+
+.btn input {
+  width: 100px;
+  border: none;
+}
+
+.post-doubt-uploadBtn::before {
+  width: 100%;
+  font-family: $font_El;
+  height: 100%;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "Choose File";
+  background-color: #0c0f33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-doubt-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 2rem;
+  width: 100%;
+  margin: 12px 0px;
+  box-sizing: border-box;
+  padding: 5px;
+
+  .addBtn {
+    width: 150px;
+  }
+}
+
+.star {
+  color: red;
+}
+
+#idImage {
+  font-size: 14px;
+  color: red;
+  display: inline-block;
+}
+
+#loader-reg {
+  width: 2.8rem;
+  align-items: center;
+  margin-bottom: -1rem;
+  margin-right: 2rem;
+  display: none;
+}
+
+@media (max-width: 943px) {
+  .instructorForm .fields {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 660px) {
+  .instructorForm .fields {
+    justify-content: center;
+  }
+  .instructorForm .fields .inputField {
+    width: 100%;
+  }
+}

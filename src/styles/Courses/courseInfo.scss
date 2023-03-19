@@ -1,0 +1,235 @@
+.course-info-main-container {
+  font-family: $font_El;
+}
+
+.course-info-banner-container {
+  background-color: #f8f8fc;
+  @include displayflex;
+  flex-wrap: wrap;
+}
+
+.banner-left {
+  width: 60%;
+  padding: 2.5rem 2rem 2rem;
+  .course-info-category {
+    background-color: #f14d5d;
+    padding: 3px 8px 2px;
+    color: white;
+    border-radius: 8px;
+    margin-right: 0.9rem;
+  }
+  .course-info-category-2 {
+    background-color: #996a1a;
+    padding: 3px 8px 2px;
+    color: white;
+    border-radius: 8px;
+  }
+  h1 {
+    width: 85%;
+    margin-top: 1.2rem;
+    line-height: 1.35em;
+  }
+  p {
+    width: 85%;
+    margin-top: 1rem;
+    color: #aaa;
+  }
+}
+
+.InstructorDetails {
+  @include displayflex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  .instructo-info-container {
+    display: flex;
+    img {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+    }
+    span {
+      margin: 12px 3rem 0px 8px;
+      font-size: 18px;
+    }
+  }
+  .card-rating {
+    margin-top: 10px;
+  }
+}
+
+.enroll-course-btn button {
+  @include sitebutton;
+  margin: 1.2rem 1rem;
+  svg {
+    color: #fff;
+    padding-top: 5px;
+  }
+}
+.enroll-course-btn button:hover {
+  background-color: #f14d5d;
+}
+
+.banner-right {
+  position: relative;
+  width: 40%;
+  min-height: 430px;
+  background-image: url("../../assets/images/course-info-banner.jpg");
+  background-size: cover;
+}
+
+.course-info-banner-image {
+  position: absolute;
+  top: 20%;
+  left: -10%;
+  width: 25rem;
+  max-height: 16.5rem;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  z-index: 1;
+}
+
+///////////////////////////////
+/// End of Banner Styling
+
+.course-info-Description-container {
+  margin: 1.2rem 1rem 1.5rem;
+}
+
+.course-info-Description {
+  @include displayflex;
+  align-items: flex-start;
+  //   flex-wrap: wrap-reverse;
+}
+
+.course-info-description-content {
+  padding: 8px;
+  width: 75%;
+  p {
+    font-size: 16px !important;
+    margin-bottom: 5px !important;
+    text-align: justify;
+  }
+  ul {
+    margin-left: 1rem !important;
+  }
+  img {
+    margin: 8px auto;
+    max-width: 25rem;
+    max-height: 22rem;
+  }
+}
+
+.course-other-detail-card {
+  width: 25%;
+  display: inline-block;
+  margin: 0px 5px 1.2rem 1.2rem;
+  ul li {
+    list-style: none;
+    margin: 12px 2px;
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 2rem;
+    color: #2b4eff;
+  }
+}
+
+.courses-review-container {
+  margin: 1rem 1.5rem;
+}
+
+.review-course-inputbox {
+  @include siteinputbox;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  min-width: 200px;
+  height: 50px;
+  padding: 0.5rem 1rem;
+}
+
+@media screen and (max-width: 991px) {
+  .banner-left {
+    width: 100%;
+    h1 {
+      width: 100%;
+    }
+    p {
+      width: 100%;
+    }
+  }
+
+  .banner-right {
+    display: none;
+  }
+
+  .course-info-Description {
+    flex-wrap: wrap-reverse;
+  }
+
+  .course-info-description-content {
+    width: 100%;
+  }
+
+  .course-other-detail-card {
+    width: 80%;
+    display: inline-block;
+    margin: 0px 5px 1.2rem 3rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .banner-left {
+    padding: 2rem 0.7rem 1.5rem;
+    .course-info-category {
+      font-size: 15px;
+    }
+    .course-info-category-2 {
+      font-size: 15px;
+    }
+  }
+
+  .InstructorDetails {
+    .instructo-info-container {
+      img {
+        width: 2.7rem;
+        height: 2.7rem;
+      }
+      span {
+        font-size: 17px;
+      }
+    }
+    .card-rating {
+      margin-top: 1rem;
+    }
+  }
+
+  .enroll-course-btn button {
+    @include sitebutton;
+    margin: 0.85rem;
+  }
+
+  .course-info-Description-container {
+    margin: 1rem 0.5rem 1.2rem;
+  }
+
+  .course-info-description-content {
+    padding: 4px;
+    img {
+      max-width: 18rem;
+      max-height: 16rem;
+    }
+  }
+
+  .course-other-detail-card {
+    margin: 0px 5px 1rem 1rem;
+  }
+
+  .courses-review-container {
+    margin: 1rem;
+  }
+
+  .review-course-inputbox {
+    height: 45px;
+  }
+}

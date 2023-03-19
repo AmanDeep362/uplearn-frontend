@@ -1,0 +1,305 @@
+$mobile-large: 512px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1200px;
+
+.course-main-comtainer {
+  font-family: $font_El;
+}
+
+// Start Banner Styling
+.intro {
+  position: relative;
+  color: #fff;
+  .squares-wrapper {
+    background: linear-gradient(to left, #6578d6, #2b4eff);
+    @include displayflex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+  }
+  .banner-text {
+    @include displayflex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    h1 {
+      color: white;
+      font-size: 2.8rem;
+    }
+    p {
+      color: rgb(22, 6, 66);
+      margin-top: 30px;
+    }
+    .course-banner-btn {
+      background-color: #e79118;
+      border: none;
+      font-size: 18px;
+      border-radius: 10px;
+      margin-top: 30px;
+      padding: 6px 16px;
+      color: #fff;
+    }
+  }
+
+  .banner-img {
+    @include displayflex;
+    justify-content: center;
+    width: 50%;
+  }
+
+  .squares {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+    li {
+      position: absolute;
+      display: block;
+      list-style: none;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      animation: animate 25s linear infinite;
+      bottom: -150px;
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.8;
+    border-radius: 50%;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+
+// End Banner Styling
+
+// Start Styling the Category slider
+
+.category-slider {
+  margin: 1.5rem 1rem 2.5rem;
+}
+
+.category-slider-header {
+  text-align: center;
+  h2 {
+    color: #2b4eff;
+    font-size: 2.25rem;
+  }
+  p {
+    color: red;
+    font-size: 18px;
+  }
+}
+
+.category-card {
+  width: 16rem;
+  border-radius: 6px;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 3px 4px 8px $black;
+  margin-top: 20px;
+}
+
+.category-card-icon {
+  @include displayflex;
+  justify-content: center;
+  img {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+.category-card-text h2 {
+  font-size: 20px;
+  text-align: center;
+  margin: 1rem auto;
+  color: #2246f7;
+}
+
+.category-card-forward{
+  text-align: center;
+  padding: 0.3rem;
+  font-size: 26px;
+  color: $black;
+  svg{
+    background-color: #f9f9f9;
+    border-radius: 4px;
+  }
+}
+
+.category-card-forward:hover{
+  color: $navbar-color;
+}
+.react-multi-carousel-track {
+  padding: 1rem !important;
+}
+
+// End Styling the Category slider
+
+// Staring design the Course Data Cards
+
+.courses-list-container {
+  margin: 1.2rem 1rem 2.5rem;
+}
+.courses-list-header h1 {
+  font-size: 2.25rem;
+  color: #2b4eff;
+}
+
+.course-list-card-container {
+  @include displayflex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.course-list-card {
+  width: 18.5rem;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  box-shadow: 2px 4px 8px $black;
+  margin: 1rem;
+}
+.course-list-card:hover {
+  box-shadow: 3px 5px 10px $black;
+}
+
+.course-card-img {
+  img {
+    width: 100%;
+    height: 10.5rem;
+    border-radius: 8px 8px 0px 0px;
+  }
+}
+
+.course-card-body {
+  margin: 5px;
+}
+
+.course-card-level {
+  color: #2b4eff;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.course-card-title {
+  padding: 5px;
+  text-transform: capitalize;
+  min-height: 70px;
+}
+
+// Styling the name and Image
+
+.cours-card-instructor {
+  @include displayflex;
+  justify-content: flex-start;
+  margin: 2px 5px;
+  img {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+  }
+  span {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px;
+  }
+}
+
+.card-rating {
+  @include displayflex;
+  justify-content: flex-end;
+  margin: -10px 10px 0px 0px;
+}
+
+.course-card-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.course-card-btn-link {
+  @include sitebutton;
+  margin: 0.8rem;
+}
+
+.course-card-btn-link:hover {
+  background-color: #f14d5d;
+}
+
+@media (max-width: 1025px) {
+  // Start Banner Styling
+  .intro {
+    .banner-text {
+      h1 {
+        font-size: 2.1rem;
+      }
+      p {
+        font-size: 15px;
+        text-align: center;
+      }
+      .course-banner-btn {
+        font-size: 17px;
+      }
+    }
+
+    .banner-img {
+      @include displayflex;
+      justify-content: center;
+      width: 50%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .category-slider-header {
+    h2 {
+      font-size: 2.2rem;
+    }
+    p {
+      font-size: 17px;
+    }
+  }
+
+  .course-list-card-container {
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 825px) {
+  .intro {
+    .banner-text {
+      width: 100%;
+
+      h1 {
+        padding-top: 1.75rem;
+      }
+    }
+
+    .banner-img {
+      @include displayflex;
+      justify-content: center;
+      width: 100%;
+      img {
+        max-width: 400px;
+      }
+    }
+  }
+
+  .courses-list-header h1 {
+    font-size: 2rem;
+  }
+}

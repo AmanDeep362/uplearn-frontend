@@ -1,0 +1,92 @@
+.admin-banner {
+    @include displayflex;
+    // Set a background Image 
+    background: url("./../../assets/images/pngtree.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 55vh;
+    justify-content: flex-start;
+    flex-direction: column;
+    font-family: $font_El;
+    color: #fff;
+    box-shadow: inset 1px 1px 8px #888888;
+    h1 {
+        font-size: 3rem;
+        padding: 4rem 2.5rem 0.5rem;
+    }
+    p {
+        font-size: 18px;
+        text-align: center;
+        width: 70vw;
+    }
+}
+
+.admin-cards-container {
+    font-family: $font_El;
+    @include displayflex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    padding: 1rem;
+}
+
+.admin-card-inner {
+    width: 18.1rem;
+    // background: linear-gradient(65deg, rgb(105, 185, 250), rgb(69, 76, 83));
+    // color: #fff;
+    border: 2px solid #f0f0f0;
+    border-radius: 8px;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: transform 0.3s ease-out;
+    img {
+        width: 18rem;
+        height: 12.5rem;
+        border-radius: 8px 8px 0px 0px;
+        padding: 1px 2px;
+        border-bottom: 2px solid #f0f0f0;
+    }
+    h3 {
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 1.4rem;
+        margin-top: 0.8rem;
+    }
+    p {
+        padding: 0px 8px;
+        font-size: 15px;
+        min-height: 70px;
+        color: #8a8a8a;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    a {
+        button {
+            @include sitebutton;
+            margin: 1rem;
+            font-weight: 600;
+        }
+    }
+}
+
+.admin-card-inner:hover {
+    transform: scale(1.025);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4), -4px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 1000px) {
+    .admin-banner {
+        justify-content: center;
+        h1 {
+            font-size: 2.6rem;
+            padding: 0px 2rem;
+        }
+        p {
+            display: none;
+        }
+    }
+}

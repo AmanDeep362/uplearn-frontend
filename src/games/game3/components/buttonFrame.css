@@ -1,0 +1,37 @@
+.firstbtn{
+    color: white;
+    background-color: green;
+     padding: .5rem 1rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+     border:none;
+    outline: none;
+    cursor: pointer;
+}
+.secondbtn{
+    color: white;
+    background-color: red;
+     padding: .5rem 1rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+      border:none;
+    outline: none;
+}
+.thirdbtn{
+    color: white;
+    background-color: #0C0F33;
+    padding: .5rem 1rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.forthbtn{
+    color: white;
+    background-color: #FFA500;
+     padding: .5rem .8rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border:none;
+    outline: none;
+}

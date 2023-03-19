@@ -1,0 +1,247 @@
+.lib-main-container {
+    font-family: $font_El;
+}
+
+.Library-banner {
+    @include displayflex;
+    justify-content: flex-start;
+    flex-direction: column;
+    box-shadow: inset 1px 1px 8px #888888;
+    img {
+        width: 100%
+    }
+}
+
+.library-heading {
+    h1 {
+        text-align: center;
+    }
+    p {
+        text-align: center;
+        letter-spacing: 1px;
+        color: $darkgrey;
+    }
+}
+
+.library-filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    margin: 1rem 0px;
+    background-color: #f0f0f0;
+    .librarySearch {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        input {
+            width: 60vw;
+            padding: 10px 20px;
+            color: #171c24;
+            border-radius: 8px 0px 0px 8px;
+            outline: none;
+            border-right: 0px;
+        }
+        button {
+            @include sitebutton;
+            padding: 5px 10px 4px;
+            margin: 0px;
+            border-radius: 0px 8px 8px 0px;
+            border: 1px solid black;
+            border-left: 0px;
+            @include displayflex;
+            i {
+                margin: 0px 5px;
+                height: 20px;
+            }
+        }
+    }
+    .libraryChoice {
+        width: 67vw;
+        padding: 1rem 0px 0px;
+        font-size: 18px;
+        transition: all 0.3s ease;
+        input {
+            margin-left: 1.2rem;
+        }
+        select {
+            width: 250px;
+            height: 40px;
+            padding: 0 15px;
+            font-size: 15px;
+            color: #171c24;
+            border-radius: 8px;
+            outline: none;
+            margin: 0px 1rem;
+        }
+        button {
+            @include sitebutton;
+        }
+    }
+}
+
+/// From Best Books
+.library_products_heading {
+    h1 {
+        color: $navbar_color;
+        text-align: center;
+        font-size: 3rem;
+    }
+    p {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 4px 2rem;
+    }
+}
+
+.home-products-details {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 0.8rem;
+    border: 3px solid #f0f0f0;
+    border-radius: 4px;
+    transition: all 0.5s ease;
+}
+
+.card:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4), -4px 4px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.03);
+}
+
+// Overlay Image
+.Product-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom: 2px solid #f0f0f0;
+    .home-product-image {
+        max-width: 17.5rem;
+        max-height: 200px;
+    }
+    .Hotproducts {
+        background-color: #E71D3A;
+        color: #fff;
+        padding: 1px 4px;
+        font-size: 14px;
+        font-weight: 500;
+        position: absolute;
+        top: 176px;
+        left: 1px;
+        text-transform: capitalize;
+    }
+}
+
+// Card Body
+.card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+}
+
+.card-text {
+    min-height: 90px;
+    font-size: 20px;
+    color: #1e2b70;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.fade-title-header {
+    color: #C1C8CE;
+    margin: 8px 0px;
+}
+
+//button
+.downloadpdf {
+    button {
+        @include sitebutton;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        line-height: 2rem;
+        width: 100%;
+        margin: 10px;
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #F6F7F8;
+    border-radius: 5px;
+    margin: 1.2rem 0px 0px;
+    padding: 1rem;
+}
+
+.pagination div {
+    width: 100%;
+    @include displayflex;
+    justify-content: center;
+    span {
+        font-size: 1.5rem;
+        color: $navbar_color;
+        cursor: pointer;
+        margin: 0px 4%;
+    }
+    p {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 763px) {
+    .library-heading {
+        h1 {
+            font-size: 1.6rem;
+        }
+        p {
+            letter-spacing: 0px;
+            font-size: 15px;
+        }
+    }
+    .library-filter-container {
+        .librarySearch {
+            input {
+                width: 68vw;
+            }
+        }
+        .libraryChoice {
+            width: 85vw;
+            font-size: 16px;
+            button {
+                margin: 1rem 0px 0px;
+                display: block;
+            }
+        }
+    }
+    /// From Best Books
+    .library_products_heading {
+        h1 {
+            font-size: 2.3rem;
+        }
+    }
+}
+
+///////////////////////////
+// Styling for the Extra axios library call 
+.libraryaxios {
+    @include displayflex;
+    justify-content: center;
+    flex-direction: column;
+    h1,
+    p {
+        text-align: center;
+    }
+}

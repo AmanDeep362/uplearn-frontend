@@ -1,0 +1,288 @@
+// Styling the website navbar
+.wrapper {
+  width: 100%;
+  font-family: $font_El;
+  position: relative;
+  box-shadow: 1px 2px 8px #888888;
+}
+
+.wrapper nav {
+  @include displayflex;
+  max-width: calc(100% - 70px);
+  margin: 0 auto;
+  height: 80px;
+}
+
+nav .content {
+  @include displayflex;
+}
+
+// Styling for the Navbar Logo and Name
+nav .content .logo a {
+  @include displayflex;
+  justify-content: center;
+  img {
+    height: 70px;
+  }
+  span {
+    color: $black;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
+}
+
+// The Link and dropdown of navbar
+nav .content .links {
+  margin: 0px 1rem;
+  display: flex;
+  li {
+    list-style: none;
+    line-height: 60px;
+    margin-top: 0.5rem;
+  }
+}
+
+.content .links li a,
+.content .links li label {
+  color: $black;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 1rem 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.content .links li label {
+  font-size: 12px;
+  padding: 0px;
+  padding-right: 0.5rem;
+}
+
+.content .links li a:hover,
+.content .links li label:hover {
+  color: $navbar_color;
+}
+
+.wrapper .menu-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 20px;
+  width: 60px;
+  text-align: center;
+  margin-top: 0.4rem;
+  color: $navbar_color;
+}
+
+.wrapper .menu-icon {
+  display: none;
+}
+
+.wrapper input[type="checkbox"] {
+  display: none;
+}
+
+/* Dropdown Menu code start */
+
+.content .links ul {
+  position: absolute;
+  background: #fff;
+  top: 80px;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.content .links li:hover > ul {
+  top: 80px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+  border-top: 1px solid #edeef3;
+}
+
+.content .links ul li {
+  margin: 0px;
+  border: 1px solid #f2f2f2;
+  border-top: 0px;
+  transition: all 0.5s ease;
+}
+
+.content .links ul li:hover {
+  background-color: $navbar_color;
+}
+
+.content .links ul li a:hover {
+  color: #fff;
+}
+
+.content .links ul li a {
+  display: block;
+  width: 12rem;
+  line-height: 12px;
+  margin-left: 12px;
+}
+
+.show-slider {
+  left: 0% !important;
+}
+
+.hideNav {
+  display: none;
+}
+
+/* Responsive code start */
+
+@media screen and (max-width: 1250px) {
+  .wrapper nav {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .wrapper .menu-icon {
+    display: block;
+  }
+  nav .content .links {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    background: #fff;
+    height: calc(100vh - 80px);
+    width: 100%;
+    top: 80px;
+    left: -100%;
+    margin-left: 0;
+    max-width: 280px;
+    overflow-y: auto;
+    padding-bottom: 100px;
+    transition: all 0.3s ease;
+    border: 1px solid #edeef3;
+  }
+  .content .links li {
+    margin: 0px !important;
+  }
+  .content .links li a,
+  .content .links li label {
+    line-height: 40px;
+    font-size: 20px;
+    display: block;
+    padding: 8px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #edeef3;
+    border-radius: 0px;
+    transition: all 0.3 ease;
+    svg {
+      padding: 5px;
+      padding-bottom: 0px;
+    }
+  }
+  .content .links li a:hover,
+  .content .links li label:hover {
+    background: $navbar_color;
+    color: #fff;
+  }
+  .content .links li a.desktop-link {
+    display: none;
+  }
+  .hideNav {
+    display: inline-block;
+  }
+  /* dropdown responsive code start */
+  .content .links ul {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    background: none;
+    max-height: 0px;
+    overflow: hidden;
+  }
+  .content .links #show-courses:checked ~ ul,
+  .content .links #show-blogs:checked ~ ul,
+  .content .links #show-pages:checked ~ ul {
+    max-height: 100vh;
+    border: none;
+  }
+  .content .links ul li {
+    margin: 0px;
+  }
+  .content .links ul li a {
+    font-size: 18px;
+    line-height: 35px;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .wrapper nav {
+    padding: 0 10px;
+  }
+  nav .content .logo a {
+    img {
+      height: 67px;
+    }
+    span {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+/////////////////////////////////////////////////////////
+/// Styling the Translator ////////
+// Style for the Sign Up button
+.sign_toggler {
+  @include displayflex;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  span {
+    display: inline-block;
+    margin-top: 1.15rem;
+    font-size: 2rem;
+    color: $navbar_color;
+    cursor: pointer;
+  }
+  .norole{
+    display: inline-block;
+    margin-top: 1.15rem;
+    font-size: 2rem;
+    color: $navbar_color;
+    cursor: pointer;
+  }
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 65px;
+  right: -15px;
+  background-color: #fff;
+  min-width: 185px;
+  z-index: 1;
+  border: 1px solid #edeef3;
+  border-top: 0px;
+  a{
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    padding: 8px;
+    color: $black;
+    border-top: 1px solid #edeef3;
+  }
+  a:hover{
+    background-color: $navbar_color;
+    color: #fff;
+  }
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  z-index: 99;
+}
+
+.notopbdr{
+  border-top: 0px;
+
+}

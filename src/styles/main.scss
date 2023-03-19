@@ -1,0 +1,88 @@
+// Importing the base style
+@import "./base/base.scss";
+
+// Import thr variable and mixins
+@import "./abstract/variables.scss";
+@import "./abstract/mixin.scss";
+
+// Importing the Navbar Style
+@import "./Navbar/Navbar.scss";
+
+//Importing the Footer Style
+@import "./Footer/Footer.scss";
+
+//Importing Register style
+@import "./Register/Register.scss";
+
+//Importing Page Not Found
+@import "./PageNotFound/PageNotFound.scss";
+
+//Importing Style of Student Dashboard
+@import "./DashboardStudent/profile.scss";
+@import "./DashboardStudent/updateProfile.scss";
+@import "./DashboardStudent/EnrolledCourses.scss";
+
+//Importing Style of Admin Portal
+@import "./AdminPortal/AdminHome.scss";
+@import "./AdminPortal/instructorRegister.scss";
+@import "./AdminPortal/InstructorList.scss";
+@import "./AdminPortal/addbook.scss";
+@import './AdminPortal/contactdetails.scss';
+
+// Importing the Style of the Doubt Page
+@import "./AdminPortal/contactdetails.scss";
+@import "./doubt/doubt.scss";
+@import "./doubt/post.scss";
+@import "./doubt/maindoubt.scss";
+
+//Importing Style of teacher courses
+@import "./Courses/Courses.scss";
+@import "./Courses/courseInfo.scss";
+@import "./Courses/courseContent.scss";
+@import "./Courses/coursevideo.scss";
+@import "./Courses/coursesQuiz.scss";
+@import "./Contact/Contact.scss";
+
+//Importing Style of Library Style
+@import "./Library/Library.scss";
+
+//Importing Style of instructor Dashboard
+@import "./DashboardInstructor/InstSidebar.scss";
+@import "./DashboardInstructor/mycourse.scss";
+@import "./DashboardInstructor/EditContent.scss";
+@import "./DashboardInstructor/CoursesQuiz.scss";
+@import "./DashboardInstructor/InstructorPendigtask.scss";
+@import "./DashboardInstructor/addcourses.scss";
+@import "./DashboardInstructor/dashboardhome.scss";
+@import "./DashboardInstructor/myclassroom.scss";
+
+// Home Route
+@import "./Home/Home.scss";
+@import "./Home/BelowHome.scss";
+@import "./Home/StatsCounter.scss";
+@import "./Home//FeaturesHome.scss";
+@import "./Home//DeliverResults.scss";
+
+//Importing Style of Games
+@import "./Games/Games.scss";
+
+//Importing Style of CareerCounselling
+@import "./careercounselling/after10th.scss";
+
+//Importing Style of About
+@import "./about/about.scss";
+
+//Importing Style of addcareercourses
+@import "./AdminPortal/addcareercourses.scss";
+
+//Importing Style of MyClassroom
+@import "./MyClassroom/myclassroom.scss";
+
+// Importing Style of Chatbox
+@import "./chatbox/chatbox.scss";
+
+//Importing MyLecture
+@import './MyLectures/Moveroutes.scss';
+
+//Importing Styling of studentInstructor card in home
+@import "./Home/StudentInstructorCard.scss";

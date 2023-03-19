@@ -1,0 +1,64 @@
+.deliver-outer-container {
+  font-family: $font_El;
+  background-color: rgb(6, 6, 37);
+  color: white;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+.deliver-container-first {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  .deliver-header {
+    font-size: 2.8rem;
+  }
+  .deliver-para {
+    font-size: 1rem;
+    max-width: 500px;
+    text-align: center;
+  }
+}
+.deliver-container-second {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.deliver-icon-content {
+  margin-top: 1rem;
+  text-align: center;
+}
+.deliver-icon {
+  color: gray;
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deliver-subheading {
+  font-size: 1.5rem;
+  width: 300px;
+  box-sizing: border-box;
+}
+.deliver-subpara {
+  max-width: 300px;
+  font-size: 0.8rem;
+  padding: 0.7rem;
+}
+
+@media screen and (max-width: 550px) {
+  .deliver-container-first {
+    padding: 16px;
+    .deliver-header {
+      font-size: 1.8rem;
+    }
+  }
+}

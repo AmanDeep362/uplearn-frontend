@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "image": "./assets/images/all-categories.png",
+    "heading": "Computer Science",
+    "Link": "/courses/Computer Science"
+  },
+  {
+    "id": 2,
+    "image": "./assets/images/art-desingn.png",
+    "heading": "Art & Design",
+    "Link": "/courses/Art & Design"
+  },
+  {
+    "id": 3,
+    "image": "./assets/images/speech.webp",
+    "heading": "Speech & Communication",
+    "Link": "/courses/Communication & Speech"
+  },
+  {
+    "id": 4,
+    "image": "./assets/images/personality_dev.png",
+    "heading": "Personality Development",
+    "Link": "/courses/Personality Development"
+  },
+  {
+    "id": 5,
+    "image": "./assets/images/music.png",
+    "heading": "Music and Instruments",
+    "Link": "/courses/Music"
+  }
+]

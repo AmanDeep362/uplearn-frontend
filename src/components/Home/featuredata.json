@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "image": "./assets/images/register.jpeg",
+    "heading": "Register Yourself",
+    "title": "A learning community dedicated to building respectful and responsible citizens and empowering all learners.",
+    "Link": "/register",
+    "name": "Register"
+  },
+
+  {
+    "id": 2,
+
+    "image": "./assets/images/Student.jpg",
+    "heading": "My Courses",
+    "title": "Theory is knowledge that doesn't work. Practice is when everything works and you don't know why.",
+    "Link": "/courses",
+    "name": "Start Courses"
+  },
+  {
+    "id": 3,
+    "image": "./assets/images/todo.jpg",
+    "heading": "My Lectures",
+    "title": "What are your goals for improving your productivity without reducing the quality of your work?",
+    "Link": "/my-lectures",
+    "name": "Start Learning"
+  },
+
+  {
+    "id": 4,
+    "image": "./assets/images/uiexp.jpeg",
+    "heading": "My Doubts",
+    "title": "Stop being afraid of what could go wrong, and start being excited of what could go right.",
+    "Link": "/ask-doubt",
+    "name": "Ask Doubt"
+  },
+  {
+    "id": 5,
+    "image": "./assets/images/teach.jpg",
+    "heading": "Learn With Fun",
+    "title": "There are no secrets to success. It is the result of preparation, hard work, and learning from failure.",
+    "Link": "/learn-with-fun",
+    "name": "Start Fun Learn"
+  },
+
+  {
+    "id": 6,
+    "image": "./assets/images/library.jpg",
+    "heading": "UpLearn Library",
+    "title": "You can get help from teachers, but you're going to have to learn a lot by yourself, sitting alone in a room.",
+    "Link": "/uplearn-virtual-library",
+    "name": "My Library"
+  },
+  {
+    "id": 7,
+    "image": "./assets/images/career-admin.png",
+    "heading": "Carrier Councelling",
+    "title": "Counselling is an active process of communication between a trained professional and a Student community",
+    "Link": "/carrer-counselling/10/after-10",
+    "name": "Start Counselling"
+  },
+  {
+    "id": 8,
+    "image": "./assets/images/contact-Img.jpg",
+    "heading": "Contact Details",
+    "title": "Curiosity is the fuel for discovery, learning & questions will get you further than confidence and answers",
+    "Link": "/contact",
+    "name": "Contact Us"
+  }
+]

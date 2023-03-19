@@ -1,0 +1,210 @@
+.contactContainer {
+    font-family: $font_El;
+    background: $grey;
+    background-image: url('./../../assets/images/sign_bg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    @include displayflex;
+    justify-content: center;
+}
+
+.contactWrapper {
+    padding: 3rem 2rem;
+    margin: 4rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 2px 7px 30px $black;
+    background: #fff;
+    width: 85vw;
+    h1 {
+        font-size: 2.4rem;
+        text-align: center;
+        color: blue;
+    }
+    p {
+        text-align: center;
+        color: $darkgrey;
+    }
+}
+
+.row-container {
+    @include displayflex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/// Styling of left side image andd icon
+.left-td {
+    width: 50%;
+    padding: 0px 2rem;
+    img {
+        width: 100%;
+    }
+}
+
+.left-side {
+    @include displayflex;
+    flex-wrap: wrap;
+    .details {
+        text-align: center;
+        svg {
+            font-size: 2rem;
+            color: #2b4eff;
+            margin-bottom: 0.5rem;
+        }
+        .topic {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .text-msg {
+            font-size: 14px;
+            color: #afafb6;
+        }
+    }
+}
+
+.right-td {
+    width: 50%;
+    @include displayflex;
+    justify-content: center;
+}
+
+// Text In Input fields 
+.contactInput {
+    margin-bottom: 1.2rem;
+    label {
+        font-size: 1rem;
+        font-weight: 500;
+        color: $black;
+        cursor: pointer;
+    }
+    input {
+        @include siteinputbox;
+    }
+    textarea {
+        @include siteinputbox;
+        height: 100px;
+    }
+}
+
+.submitBtn {
+    @include sitebutton;
+    display: inline-block;
+    line-height: 40px;
+    width: 100%;
+    margin: 12px 0px 0px;
+}
+
+.submitBtn:hover {
+    transition: all .3s ease-out 0s;
+    box-shadow: 0 3px 10px rgba(43, 78, 255, 0.4);
+}
+
+@media (max-width: 991px) {
+    .contactWrapper {
+        width: 90vw;
+        h1 {
+            font-size: 2.2rem;
+        }
+    }
+    .left-td {
+        padding: 0px 1rem;
+    }
+    .left-side {
+        @include displayflex;
+        flex-wrap: wrap;
+        .details {
+            svg {
+                font-size: 1.5rem;
+            }
+            .topic {
+                font-size: 1rem;
+            }
+            .text-msg {
+                font-size: 12px;
+            }
+        }
+    }
+    // Text In Input fields 
+    .contactInput {
+        margin-bottom: 1rem;
+        label {
+            font-size: 15px;
+        }
+        input {
+            @include siteinputbox;
+            padding: 0px 12px;
+            height: 50px;
+        }
+        textarea {
+            @include siteinputbox;
+            height: 70px;
+        }
+    }
+    .submitBtn {
+        line-height: 30px;
+        margin: 0px;
+    }
+}
+
+@media (max-width: 763px) {
+    .contactWrapper {
+        width: 97vw;
+        h1 {
+            font-size: 2rem;
+        }
+    }
+    /// Styling of left side image andd icon
+    .left-td {
+        width: 100%;
+        @include displayflex;
+        flex-direction: column;
+        img {
+            max-width: 320px;
+        }
+    }
+    .left-side {
+        @include displayflex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .details {
+            text-align: center;
+            margin: 1rem 1.4rem;
+            svg {
+                font-size: 2rem;
+                color: #2b4eff;
+                margin-bottom: 0.5rem;
+            }
+            .topic {
+                font-size: 18px;
+                font-weight: 500;
+            }
+            .text-msg {
+                font-size: 14px;
+                color: #afafb6;
+            }
+        }
+    }
+    .right-td {
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+    // Text In Input fields 
+    .contactInput {
+        margin-bottom: 1rem;
+        label {
+            font-size: 1rem;
+        }
+        input {
+            @include siteinputbox;
+        }
+        textarea {
+            @include siteinputbox;
+            height: 100px;
+        }
+    }
+    .submitBtn {
+        line-height: 40px;
+        margin: 12px 0px 0px;
+    }
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "image": "./assets/images/game2bg.png",
+    "heading": "Hangman",
+    "desc": "How familiar are you with the states of India? Let's Check",
+    "Link": "/hangman"
+  },
+  {
+    "id": 2,
+    "image": "./assets/images/first-game.png",
+    "heading": "Maths Booster",
+    "desc": "Boost up your maths!",
+    "Link": "/maths-booster"
+  },
+  {
+    "id": 3,
+    "image": "./assets/images/countryLang.png",
+    "heading": "Guess the Language",
+    "desc": "How many Languages do you know? Let's Check!",
+    "Link": "/guess-language"
+  },
+  {
+    "id": 4,
+    "image": "./assets/images/count.png",
+    "heading": "Count and Choose",
+    "desc": "Improve your maths by counting birds",
+    "Link": "/count-and-choose"
+  }
+]

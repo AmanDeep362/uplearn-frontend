@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
+
+.answer {
+  border: 2px solid #2B4EFF;
+  margin: .5rem 0px;
+  height: 3rem;
+  font-family: 'El Messiri', sans-serif;
+  background-color: snow;
+  margin-left: 50px;
+}
+
+.answer-option {
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+.answer-letter {
+  flex: 10%;
+  margin-left: 10px;
+  color: white;
+  text-align: center;
+}
+
+.answer-letter p {
+  padding-top: 3px;
+  background-color: #008fed;
+  border-radius: 50%;
+}
+
+.answer-text {
+  flex: 90%;
+  text-align: center;
+}
+
+.answer-text p {
+  color: #111;
+  font-weight: 800;
+}
+
+.correct-answer {
+  border: 2px solid #3EC70B;
+}
+.correct-answer .answer-letter p {
+  background-color: #3EC70B;
+}
+
+.wrong-answer {
+  border: 2px solid tomato;
+}
+.wrong-answer .answer-letter p {
+  background-color: tomato;
+}
+
+.disabled-answer {
+  pointer-events: none;
+}
+
+.help-answer {
+  background: linear-gradient(to right, #2B4EFF 10%, transparent 90%);
+}

@@ -1,0 +1,169 @@
+.instructor {
+    font-family: $font_El;
+}
+
+.instructorHeader {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #0C0F33;
+    .backBtn {
+        margin-right: 6rem;
+        font-size: 1.6rem;
+        cursor: pointer;
+        margin-top: .5rem;
+    }
+}
+
+.instructorWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DBE2F7;
+}
+
+.instructorForm {
+    width: 100%;
+    max-width: 950px;
+    margin: 3rem 0;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    background-color: white;
+    h3 {
+        font-size: 1.8rem;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+}
+
+.instructorForm .fields {
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    gap: .8rem;
+    margin: 8px 0 2rem 0;
+    flex-wrap: wrap;
+}
+
+.instructorForm .fields .inputField {
+    display: flex;
+    flex-direction: column;
+    // width: calc(100% /3 - 10px);
+    width: 290px;
+}
+
+.inputField label {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.inputField input,
+.inputField select {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    outline: none;
+    padding: 0 10px;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+//upload button
+.uploadBtn {
+    // margin-top: 1rem;
+    position: relative;
+    all: none;
+    cursor: pointer;
+    padding: .5rem 0;
+    background-color: transparent;
+}
+
+.btn input {
+    width: 100px;
+    border: none;
+}
+
+.uploadBtn::before {
+    width: 100%;
+    font-family: $font_El;
+    height: 100%;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: 'Upload File';
+    background-color: #0C0F33;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.instructorForm .title {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: rgb(134, 133, 133);
+}
+
+.instructorRegisterBtn {
+    @include displayflex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.registerBtn {
+    @include sitebutton;
+    display: inline-block;
+    line-height: 2rem;
+    width: 100%;
+    margin: 12px 0px;
+}
+
+.star {
+    color: red;
+}
+
+.uploadphoto {
+    font-size: 14px;
+    color: red;
+    display: inline-block;
+}
+
+#loader-reg {
+    width: 2.8rem;
+    align-items: center;
+    margin-bottom: -1rem;
+    margin-right: 2rem;
+    display: none;
+}
+
+.assignTasktextArea{
+    @include siteinputbox;
+    height: 22vh;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    padding: 10px;
+    line-height: 20px;
+}
+
+.instructor-info-fTask{
+    font-size: 17px;
+    p{
+        padding: 4px 10px;
+    }
+}
+
+@media (max-width: 943px) {
+    .instructorForm .fields {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 660px) {
+    .instructorForm .fields {
+        justify-content: center;
+    }
+    .instructorForm .fields .inputField {
+        width: 100%;
+    }
+}

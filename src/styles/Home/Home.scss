@@ -1,0 +1,228 @@
+.home-container {
+  min-height: 65vh;
+  border-bottom: 1px solid #888;
+  background-color: rgba(0, 0, 255, 0.75);
+}
+$t: 2.5s;
+$e1: cubic-bezier(0.8, 0, 0.1, 1);
+$e2: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+$er: linear;
+
+$font: $font_El;
+
+$slides: 4;
+$images: url("../../assets/images/1imghome.png")
+  url("../../assets/images/2imghome.png")
+  url("../../assets/images/3imghome.png")
+  url("../../assets/images/4imghome.png");
+
+.untitled {
+  position: absolute;
+  height: 65vh;
+  width: 100%;
+  overflow: hidden;
+  @keyframes rotate {
+    0% {
+      filter: rotate(0deg);
+    }
+    20% {
+      filter: rotate(0deg);
+    }
+    25% {
+      filter: rotate(90deg);
+    }
+    45% {
+      filter: rotate(90deg);
+    }
+    50% {
+      filter: rotate(180deg);
+    }
+    70% {
+      filter: rotate(180deg);
+    }
+    75% {
+      filter: rotate(270deg);
+    }
+    95% {
+      filter: rotate(270deg);
+    }
+    100% {
+      filter: rotate(360deg);
+    }
+  }
+  animation: rotate infinite $t * $slides * 2 linear;
+  animation-delay: $t/4;
+
+  &__shutters {
+    overflow: hidden;
+    position: absolute;
+    height: 150vmax;
+    width: 150vmax;
+    left: calc(50% - 75vmax);
+    top: calc(50% - 75vmax);
+    pointer-events: none;
+    z-index: 2;
+    @keyframes rotateFrame {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(180deg);
+      }
+    }
+    animation: rotateFrame $t * 4 $er infinite;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      height: 65vh;
+      width: 100%;
+      left: 50%;
+      transform: translate3d(-50%, 0, 0);
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      pointer-events: auto;
+      overflow: hidden;
+    }
+    &:before {
+      bottom: 50%;
+      @keyframes openTop {
+        0% {
+          transform: translate3d(-50%, 0, 0);
+          animation-timing-function: $e1;
+        }
+        40% {
+          transform: translate3d(-50%, -65vmax, 0);
+          animation-timing-functon: $e2;
+        }
+        70% {
+          transform: translate3d(-50%, -65vmax, 0);
+          animation-timing-functon: $e2;
+        }
+        100% {
+          transform: translate3d(-50%, 0, 0);
+          animation-timing-function: $e2;
+        }
+      }
+      animation: openTop $t * 2 infinite;
+    }
+    &:after {
+      top: 50%;
+      @keyframes openBottom {
+        0% {
+          transform: translate3d(-50%, 0, 0);
+          animation-timing-function: $e1;
+        }
+        40% {
+          transform: translate3d(-50%, 65vmax, 0);
+          animation-timing-functon: $e2;
+        }
+        70% {
+          transform: translate3d(-50%, 65vmax, 0);
+          animation-timing-functon: $e2;
+        }
+        100% {
+          transform: translate3d(-50%, 0, 0);
+          animation-timing-function: $e2;
+        }
+      }
+      animation: openBottom $t * 2 infinite;
+    }
+  }
+
+  &__slides {
+    position: absolute;
+    height: 65vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  &__slide {
+    position: absolute;
+    height: 65vh;
+    width: 100%;
+    opacity: 0;
+    @keyframes showHideSlide {
+      0% {
+        opacity: 1;
+        pointer-events: auto;
+        z-index: 1;
+      }
+      #{100% / $slides} {
+        opacity: 0;
+        pointer-events: none;
+        z-index: -1;
+      }
+      100% {
+        opacity: 0;
+        pointer-events: none;
+        z-index: -1;
+      }
+    }
+    animation: showHideSlide infinite $t * $slides * 2 steps(1);
+    @for $i from 1 through $slides {
+      &:nth-child(#{$i}) {
+        animation-delay: $t * ($i - 1) * 2;
+        .untitled__slideBg {
+          background-image: nth($images, $i);
+        }
+      }
+    }
+  }
+  &__slideBg {
+    // margin-top: 10px;
+    position: relative;
+    height: 65vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    z-index: -1;
+    @keyframes bgInOut {
+      0% {
+        transform: rotate(-45deg) scale(1.1);
+        animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+      33% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(0deg);
+      }
+      66% {
+        transform: rotate(0deg);
+        animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+      }
+      100% {
+        transform: rotate(45deg) scale(0.9);
+      }
+    }
+    animation: bgInOut $t * 4 -$t * 2 infinite;
+  }
+  &__slideContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    color: white;
+    font-family: $font;
+    line-height: 0.8;
+    letter-spacing: -0.025em;
+    z-index: 2;
+    opacity: 1;
+    text-shadow: 0 0 0.5em rgba($color, 0.25);
+    mix-blend-mode: lighten;
+    span {
+      display: block;
+      font-size: 15vmin;
+    }
+  }
+}
+

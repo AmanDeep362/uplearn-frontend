@@ -1,0 +1,101 @@
+.games-banner {
+  @include displayflex;
+  justify-content: center;
+  // Set a background Image
+  background: url("https://funandlearn.in/wp-content/uploads/2022/03/Banner3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  box-shadow: inset 1px 1px 8px #888888;
+}
+.games-header {
+  h1 {
+    font-family: $font_El;
+    padding: 1rem;
+    color: $navbar_color;
+    text-align: center;
+    font-size: 2.8rem;
+  }
+}
+
+.container-game {
+  // position: relative;
+  @include displayflex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-family: $font_El;
+  padding: 12px 8px 1.2rem;
+}
+
+.container-game .card-game {
+  position: relative;
+  max-width: 280px;
+  height: 150px;
+  margin: 2.5rem 1.25rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s ease-in-out;
+  background-color: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.container-game .card-game:hover {
+  height: 300px;
+  margin-top: 4rem;
+}
+
+.container-game .card-game .image-game {
+  position: relative;
+  width: 280px;
+  height: 160px;
+  top: -40%;
+  left: 2px;
+  box-shadow: 0 5px 20px rgba(169, 165, 165, 0.2);
+  z-index: 1;
+  img {
+    width: 100%;
+    height: 160px;
+    border-radius: 15px;
+  }
+}
+
+.container-game .card-game .content-game {
+  position: relative;
+  top: -140px;
+  padding: 1rem;
+  color: $black;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  h3 {
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+  }
+  a {
+    button {
+      @include sitebutton;
+      margin: 1rem;
+      font-weight: 600;
+    }
+  }
+  p {
+    padding: 0px 8px;
+    font-size: 1rem;
+    min-height: 3rem;
+    color: $darkgrey;
+    text-align: center;
+    text-transform: capitalize;
+  }
+}
+
+.container-game .card-game:hover .content-game {
+  margin-top: 2rem;
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.1s;
+}
